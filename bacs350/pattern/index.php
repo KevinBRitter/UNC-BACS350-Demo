@@ -39,6 +39,9 @@
             <li>
                 <a href="card_view">Card View Pattern</a>
             </li>
+             <li>
+                <a href="doclinks">Doc Links Pattern</a>
+            </li>
         </ul>
     ';
 
