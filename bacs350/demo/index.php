@@ -74,6 +74,9 @@
             <li>
                 <a href="17">Demo #17 - List Database Records</a>
             </li>
+            <li>
+                <a href="18">Demo #18 - Database CRUD</a>
+            </li>
         </ul>
     ';
 

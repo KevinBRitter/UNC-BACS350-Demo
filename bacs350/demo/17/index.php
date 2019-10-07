@@ -7,7 +7,7 @@
     See a much <a href="better.php">Better Implementation</a>.
 </p>
 
-
+<h2>Subscribers</h2>
 <?php
 
     // Connect to Subscribers database automatically
@@ -29,3 +29,5 @@
     echo '</ul>';
 
 ?>
+
+<p>This query was successful</p>

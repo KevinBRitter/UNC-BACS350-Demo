@@ -27,7 +27,13 @@
                 <a href="../superhero">Project #3 - Render Page - Superhero Gallery</a>
             </li>
             <li>
-                <a href="../planner">Project #4 - Markdown Docs - Project Planner</a>
+                <a href="../planner">Project #4 - Markdown Docs</a>
+            </li>
+             <li>
+                <a href="../docman">Project #5 - Document Manager</a>
+            </li>
+            <li>
+                <a href="../subscriber">Project #6 - Subscriber Database</a>
             </li>
         </ul>
     ';
