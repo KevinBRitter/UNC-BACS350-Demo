@@ -11,9 +11,10 @@
 
     
     // Button to go to other views
-    $add_button = '<a href="insert.php">Add Subscriber</a>';
+    $add_button = '<a class="button" href="insert.php">Add Subscriber</a>';
 
     
+    // Display the HTML in the page
     $intro = '
         <p>
             This email list gives you access to big ideas and deep thoughts.
@@ -25,5 +26,5 @@
     $content = "$intro $list $add_button";
 
     // Show the page
-    echo render_page('UNC BACS 350', "Seaman's List Subscribers", $content);
+    echo render_page('UNC BACS 350', "Demo 20 - Add Subscriber Form", $content);
 ?>
