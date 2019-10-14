@@ -26,7 +26,7 @@
         foreach($superheroes as $row) {
             $title = $row['name'];
             $delete = "<a href='delete.php?id=$row[id]'>Delete Record</a>";
-            $photo = "<img src='images/$row[image]' alt='$row[image]'>"
+            $photo = "<img src='images/$row[image]' alt='$row[image]'>";
             $body = "
                 <table class='table table-hover'>
                     <tr><td>$photo</td></tr>
