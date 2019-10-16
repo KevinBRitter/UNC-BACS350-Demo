@@ -84,7 +84,10 @@
                 <a href="20">Demo #20 - CRUD Views</a>
             </li>
             <li>
-                <a href="21">Demo #21 - CRUD Views</a>
+                <a href="21">Demo #21 - Add Views</a>
+            </li>
+            <li>
+                <a href="22">Demo #22 - Edit Views</a>
             </li>
         </ul>
     ';
