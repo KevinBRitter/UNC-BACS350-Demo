@@ -75,32 +75,7 @@
     }
 
 
-    // Update the database
-    function update_note ($db, $id, $title, $body, $date) {
-        try {
-            // Modify database row
-            $query = "UPDATE notes SET title=:title, body=:body, date=:date WHERE id = :id";
-            $statement = $db->prepare($query);
-
-            $statement->bindValue(':id', $id);
-            $statement->bindValue(':title', $title);
-            $statement->bindValue(':body', $body);
-            $statement->bindValue(':date', $date);
-
-            $statement->execute();
-            $statement->closeCursor();
-
-            return true;
-        } catch (PDOException $e) {
-            $error_message = $e->getMessage();
-            echo "<p>Error: $error_message</p>";
-            die();
-        }
-        
-    }
-
-
-
+    
     /* -------------------------------
         DATABASE CONNECT
     ------------------------------- */

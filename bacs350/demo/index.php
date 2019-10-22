@@ -89,6 +89,12 @@
             <li>
                 <a href="22">Demo #22 - Edit Views</a>
             </li>
+            <li>
+                <a href="23">Demo #23 - Page Logging</a>
+            </li>
+            <li>
+                <a href="24">Demo #24 - Review App</a>
+            </li>
         </ul>
     ';
 

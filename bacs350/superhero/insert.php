@@ -28,12 +28,12 @@
 
         echo render_page('UNC BACS 350', "Add Subscriber", $content);
     }
-
-
-    // Add record and return to list
-    if (add_superhero ($db, $name, $aka, $image, $description))
-    {
-        header("Location: index.php");
-    };
+    else {
+        // Add record and return to list
+        if (add_superhero ($db, $name, $aka, $image, $description))
+        {
+            header("Location: index.php");
+        };
+    }
  
 ?>

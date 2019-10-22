@@ -3,26 +3,35 @@
     require_once 'views.php';
 
 
-    // add_note_form -- Create an HTML form to add record.
-    function add_note_form() {
-        $title = 'Add Note';
+    // add_review_form -- Create an HTML form to add record.
+    // Fields: designer, url, report, score, date
+    function add_review_form() {
+        $title = 'Add Review';
         $body = '
             <form action="insert.php" method="get">
                 <table class="table table-hover">
                     <tr>
-                        <td><label>Date:</label></td>
+                        <td width="500"><label>Date:</label></td>
                         <td><input type="date" name="date"></td>
                     </tr>
                     <tr>
-                        <td><label>Title:</label></td>
-                        <td><input type="text" name="title"></td>
+                        <td><label>Designer:</label></td>
+                        <td><input type="text" name="designer"></td>
                     </tr>
                     <tr>
-                        <td><label>Body:</label></td>
-                        <td><textarea name="body" placeholder="Type text here"></textarea></td>
+                        <td><label>Page to Review:</label></td>
+                        <td><input type="url" name="url"></td>
                     </tr>
                     <tr>
-                        <td><button class="button">Save Record</button></td>
+                        <td><label>Review Score:</label></td>
+                        <td><input type="number" name="score"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Page to Review:</label></td>
+                        <td><textarea name="report"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><button class="button">Save Review</button></td>
                     </tr>
                 </table>
             </form>
@@ -32,9 +41,9 @@
 
 
     // Create an HTML list on the output
-    function render_notes($notes) {
+    function render_reviews($reviews) {
         $html = '';
-        foreach($notes as $row) {
+        foreach($reviews as $row) {
             $title = $row['title'];
             $delete_href = "delete.php?id=$row[id]";
             $edit_href = "update.php?id=$row[id]";
@@ -52,7 +61,7 @@
 
 
     // Show form for adding a record
-    function edit_note_form($record) {
+    function edit_review_form($record) {
         $id    = $record['id'];
         $date  = $record['date'];
         $title = $record['title'];

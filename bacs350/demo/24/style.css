@@ -46,24 +46,24 @@ h1 {
     color: #0E3D65;
 }
 
-img {
-    width: 200px;
-/*
-    border-radius: 40px;
-    box-shadow: 4px 4px 6px;
-*/
-    border: 3px solid #0E3D65;
-}
-
 /*h2 {*/
 /*    color: #F6B018;*/
 /*    border: 2px solid #F6B018;;*/
 /*}*/
 
+input {
+    width: 80%;
+}
+
 pre {
     border: 1px solid #0E3D65;
     padding: 1em;
     margin: 2em;
+}
+
+textarea {
+    width: 80%;
+    height: 50em;
 }
 
 .button {
@@ -80,6 +80,10 @@ pre {
     border: 1px solid #0E3D65;
     width: 40%;
     float: left;
+}
+
+.card-wide {
+    width: 80%;
 }
 
 .card-header {

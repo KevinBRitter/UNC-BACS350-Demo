@@ -20,7 +20,7 @@
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
             echo "<p>Error: $error_message</p>";
-            die();
+            // die();
         }
     }
 
