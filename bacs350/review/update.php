@@ -7,7 +7,7 @@
 
 
     // Pick out the inputs
-    $id    = filter_input(INPUT_GET, 'id');
+    $id = filter_input(INPUT_GET, 'id');
     $designer = filter_input(INPUT_GET, 'designer');
     $url = filter_input(INPUT_GET, 'url');
     $report = filter_input(INPUT_GET, 'report');
@@ -19,15 +19,13 @@
         
 
     // Gather user input with a form
-    if ($id == '' || $designer == '' || $url == '' || $report == '' || $score == '' || $date == '') {
+    if ($designer == '' || $url == '' || $report == '' || $score == '' || $date == '') {
         
-        // Form view to add notes
+        // Display Form view to edit review
         $id = filter_input(INPUT_GET, 'id');
         $review = get_review($db, $id);
-        $edit_form = edit_review_form($review);
+        echo edit_review_form($review);;
 
-        // Display the HTML in the page
-        echo render_page('UNC BACS 350', "Edit Review", $edit_form);
     }
     else {
         

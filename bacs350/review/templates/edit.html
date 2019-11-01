@@ -1,0 +1,32 @@
+<form action="update.php" method="get">
+
+    <table class="table table-hover">
+
+        <tr>
+            <td style="width:200px"><label>Date:</label></td>
+            <td><input type="date" name="date" value="{{ date }}"></td>
+        </tr>
+        <tr>
+            <td><label>Designer:</label></td>
+            <td><input type="text" name="designer" value="{{ designer }}"></td>
+        </tr>
+        <tr>
+            <td><label>Page:</label></td>
+            <td><input type="text" name="url" value="{{ url }}"></td>
+        </tr>
+        <tr>
+            <td><label>Score:</label></td>
+            <td><input type="number" name="score" value="{{ score }}"></td>
+        </tr>
+        <tr>
+            <td><label>Report:</label></td>
+            <td><textarea name="report">{{ report }}</textarea></td>
+        </tr>
+        <tr>
+            <td><button class="button">Save Record</button></td>
+        </tr>
+
+    </table>
+
+    <input type="hidden" name="id" value="{{ id }}">
+</form>

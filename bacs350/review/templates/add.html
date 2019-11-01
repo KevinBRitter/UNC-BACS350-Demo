@@ -1,0 +1,33 @@
+<form action="insert.php" method="get">
+
+    <table class="table table-hover">
+
+        <tr>
+            <td style="width:200px"><label>Date:</label></td>
+            <td><input type="date" name="date"></td>
+        </tr>
+        <tr>
+            <td><label>Designer:</label></td>
+            <td><input type="text" name="designer"></td>
+        </tr>
+        <tr>
+            <td><label>Page to Review:</label></td>
+            <td><input type="url" name="url"></td>
+        </tr>
+        <tr>
+            <td><label>Review Score:</label></td>
+            <td><input type="number" name="score"></td>
+        </tr>
+        <tr>
+            <td><label>Review Summary:</label></td>
+            <td>
+                <textarea name="report">{{ report }}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><button class="button">Save Review</button></td>
+        </tr>
+
+    </table>
+
+</form>

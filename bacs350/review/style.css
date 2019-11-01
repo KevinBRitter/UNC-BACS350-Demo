@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*    border: 1px dashed gray;*/
+}
+
 body {
     padding: 2em;
 }
@@ -6,7 +12,7 @@ header {
     border: 5px solid #F6B018;
     background-color: #0E3D65;
     font-family: sans-serif;
-    padding: .5em;
+    padding: 1.5em;
 }
 
 header a {
@@ -46,23 +52,29 @@ h1 {
     color: #0E3D65;
 }
 
-/*h2 {*/
-/*    color: #F6B018;*/
-/*    border: 2px solid #F6B018;;*/
-/*}*/
+h2 {
+    color: #F6B018;
+    /*    border: 2px solid #F6B018;;*/
+}
 
 input {
     width: 80%;
+}
+
+p {
+    padding: 10px;
+    margin: 20px;
 }
 
 pre {
     border: 1px solid #0E3D65;
     padding: 1em;
     margin: 2em;
+    background-color: #eeeeee;
 }
 
 textarea {
-    width: 20em;
+    width: 80%;
     height: 20em;
 }
 
@@ -76,10 +88,9 @@ textarea {
 }
 
 .card {
-    margin: 20px;
     border: 1px solid #0E3D65;
-    width: 40%;
-    float: left;
+    width: 80%;
+    margin: 2em auto;
 }
 
 .card-wide {

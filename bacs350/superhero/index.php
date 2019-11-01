@@ -11,19 +11,19 @@
 
     
     // Button to go to other views
-    $add_button = '<p><a class="button" href="insert.php">Add Subscriber</a></p>';
+    $add_button = '<p><a class="button" href="insert.php">Add Hero</a></p>';
 
     
     $intro = '
         <p>
-            This email list gives you access to big ideas and deep thoughts.
+            This database shows a list of my favorite superheroes.  
         </p>
         <p>
-            Visit the <a href="https://seamanslog.com">Seaman\'s Log</a> site now to start reading.
+            The source code is available at <a href="https://github.com/Mark-Seaman/UNC-BACS350-Demo/tree/master/bacs350/superhero">Superhero Database</a>
         </p>
     ';
     $content = "$intro $add_button $list";
 
     // Show the page
-    echo render_page('UNC BACS 350', "Seaman's List Subscribers", $content);
+    echo render_page('UNC BACS 350', "Seaman's Superhero Gallery", $content);
 ?>
