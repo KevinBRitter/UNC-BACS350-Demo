@@ -1,7 +1,7 @@
 <?php
     
-    // Bring in rendering functions
     require_once 'views.php';
+
 
 
     // Display the page content
@@ -16,7 +16,7 @@
     // Create main part of page content
     $settings = array(
         "site_title" => "UNC BACS 350",
-        "page_title" => "Demo 27 - Component Templates", 
+        "page_title" => "Demo 29 - Component Templates", 
         "logo"       => "Bear.png",
         "style"      => 'style.css',
         "content"    => $content);

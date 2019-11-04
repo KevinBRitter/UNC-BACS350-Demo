@@ -107,6 +107,9 @@
             <li>
                 <a href="29">Demo #29 - Complex Views</a>
             </li>
+            <li>
+                <a href="30">Demo #30 - MVC Pattern</a>
+            </li>
         </ul>
     ';
 
