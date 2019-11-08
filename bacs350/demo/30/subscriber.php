@@ -6,7 +6,7 @@
 
 
     /* ---------------------------
-                C R U D
+             M O D E L
      --------------------------- */
 
     // Add a new record
@@ -56,47 +56,7 @@
     }
 
 
-    // Handle all action verbs
-    function handle_actions() {
-        $id = filter_input(INPUT_GET, 'id');
-        global $subscribers;
-        global $log;
-        global $db;
-
-        // POST
-        $action = filter_input(INPUT_POST, 'action');
-        if ($action == 'create') {    
-            log_event('Subscriber CREATE');                     // CREATE
-            add_subscriber($db);
-        }
-        if ($action == 'update') {
-            log_event('Subscriber UPDATE');                     // UPDATE
-            update_subscriber($db);
-        }
-
-        // GET
-        $action = filter_input(INPUT_GET, 'action');
-        if (empty($action)) {                                  
-            log_event('Subscriber READ');                       // READ
-            $list = query_subscribers($db);
-            return subscriber_list_view($list);
-        }
-        if ($action == 'delete') {
-            log_event('Subscriber DELETE');                     // DELETE
-            return delete_subscriber($db);
-        }
-        if ($action == 'add') {              
-            log_event('Subscriber Add View');                   // Add View
-            return add_subscriber_view();
-        }
-        if ($action == 'edit' and ! empty($id)) {
-            log_event('Subscriber Edit View');                  // Edit View
-            $record = get_subscriber($db, $id);
-            return edit_subscriber_view($record);
-        }
-    }
-       
-
+    
     // Query for all subscribers
     function query_subscribers ($db) {
         $query = "SELECT * FROM subscribers";
@@ -127,7 +87,7 @@
     }
 
     /* ---------------------------
-                V I E W S
+                V I E W 
      --------------------------- */
 
     // subscriber_list_view -- Create a bullet list in HTML
@@ -182,6 +142,52 @@
             </div>
         ';
     }
+
+
+    /* ---------------------------
+         C O N T R O L L E R
+     --------------------------- */
+
+    // Handle all action verbs
+    function handle_actions() {
+        $id = filter_input(INPUT_GET, 'id');
+        global $subscribers;
+        global $log;
+        global $db;
+
+        // POST
+        $action = filter_input(INPUT_POST, 'action');
+        if ($action == 'create') {    
+            log_event('Subscriber CREATE');                     // CREATE
+            add_subscriber($db);
+        }
+        if ($action == 'update') {
+            log_event('Subscriber UPDATE');                     // UPDATE
+            update_subscriber($db);
+        }
+
+        // GET
+        $action = filter_input(INPUT_GET, 'action');
+        if (empty($action)) {                                  
+            log_event('Subscriber READ');                       // READ
+            $list = query_subscribers($db);
+            return subscriber_list_view($list);
+        }
+        if ($action == 'delete') {
+            log_event('Subscriber DELETE');                     // DELETE
+            return delete_subscriber($db);
+        }
+        if ($action == 'add') {              
+            log_event('Subscriber Add View');                   // Add View
+            return add_subscriber_view();
+        }
+        if ($action == 'edit' and ! empty($id)) {
+            log_event('Subscriber Edit View');                  // Edit View
+            $record = get_subscriber($db, $id);
+            return edit_subscriber_view($record);
+        }
+    }
+       
 
  
 ?>
