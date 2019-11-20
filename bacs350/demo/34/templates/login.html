@@ -1,0 +1,33 @@
+<h2>User Login</h2>
+
+<div class="card">
+    <div class="card-header">
+        Login Form
+    </div>
+    <div class="card-body">
+        <form action="{{ next }}" method="post">
+
+            <table class="table table-hover">
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td><input type="text" name="email" class="form-text"></td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td><input type="password" name="password" class="form-text"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Login" class="button"></td>
+                </tr>
+            </table>
+
+            <input type="hidden" name="action" value="validate">
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
+    </div>
+</div>
+
+<p>
+    Or register for a new account
+</p>
+<p><a href="{{ next }}?action=signup" class="button">Sign Up</a></p>
