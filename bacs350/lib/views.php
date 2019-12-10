@@ -1,4 +1,5 @@
 <?php
+    
 
     // article_settings -- Create the HTML page for one article.
     function article_settings($title, $body, $author) {
@@ -116,7 +117,8 @@
 
     // render_template -- Convert template file using the settings
     function render_template($template, $settings) {
-        $text = file_get_contents("templates/" . $template);
+        define ('TEMPLATES_DIR', $_SERVER['DOCUMENT_ROOT'] . '/bacs350/templates/');
+        $text = file_get_contents(TEMPLATES_DIR . $template);
         $text = transform_text($text, $settings);
         return $text;
     }

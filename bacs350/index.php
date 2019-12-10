@@ -1,48 +1,24 @@
 <?php
 
-    /*
-        Create page content by rendering a template.
-    */
+    // Import library code
+    define ('LIB_DIR', $_SERVER['DOCUMENT_ROOT'] . '/bacs350/lib/');
+    require_once LIB_DIR . 'views.php';
+    require_once LIB_DIR . 'log.php';
+    
 
-    $site_title = 'UNC BACS 350';
-    
-    $page_title = "The Seaman's Brain";
-    
-    $content = '
-        <p>
-            <a href="/">BACS 350 WordPress Blog</a>
-        </p>
-        <p> 
-            This page is the beginning of an ongoing project in BACS 350.
-        </p>
-        <p> 
-            It is a custom information manager.
-        </p>
-        <p> 
-            Different rooms within this PHP app will contain different types of info.
-        </p>
-        <p>
-            The source code is available at <a href="https://github.com/Mark-Seaman/UNC-BACS350-Demo/tree/master/bacs350">BACS 350 Source Code</a>.
-        </p>
-        
-        <ul>
-            <li>
-                <a href="team.php">Project Team</a>
-            </li>
-            <li>
-                <a href="demo">Code Demos</a>
-            </li>
-            <li>
-                <a href="pattern">Design Patterns</a>
-            </li>
-            <li>
-                <a href="project">Projects</a>
-            </li>
-        </ul>
-    ';
+    // Log the page load
+    log_page();
 
-    include 'views.php';
-    
-    echo render_page($site_title, $page_title, $content);
+
+    // Create main part of page content
+    $content = render_template ("home.html", array());
+
+    $settings = array(
+        "site_title" => "UNC BACS 350 Demo",
+        "page_title" => "Home Page", 
+        'user'       => "",
+        "content"    => $content);
+
+    echo render_page($settings);
 
 ?>

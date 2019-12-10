@@ -1,0 +1,23 @@
+<div class="card">
+
+    <div class="card-header">
+        [{{ id }}] {{ title }}
+    </div>
+
+    <div class="card-body card-padding">
+        <pre>{{ body }}</pre>
+    </div>
+
+    <p>
+        <a class="button" href="slideshow.php?id={{ id }}" target="slides">
+            Show Slides
+        </a>
+        <a href="index.php?action=edit&id={{ id }}" class="button">
+            Edit Slides
+        </a>
+        <a class="button" href="index.php?action=delete&id={{ id }}">
+            Delete Slides
+        </a>
+    </p>
+
+</div>
